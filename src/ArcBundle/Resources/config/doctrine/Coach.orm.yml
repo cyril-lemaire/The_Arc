@@ -1,0 +1,16 @@
+ArcBundle\Entity\Coach:
+    type: entity
+    table: null
+    repositoryClass: ArcBundle\Repository\CoachRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+
+    oneToMany:
+        contents:
+            targetEntity: Content
+            mappedBy: coach
+    lifecycleCallbacks: {  }

@@ -1,0 +1,24 @@
+ArcBundle\Entity\Client:
+    type: entity
+    table: null
+    repositoryClass: ArcBundle\Repository\ClientRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+
+    manyToMany:
+        contentsLiked:
+            targetEntity: Content
+            joinTable:
+                name: clients_contents
+                joinColumns:
+                    client_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    content_id:
+                        referencedColumnName: id
+                        unique: true
+    lifecycleCallbacks: {  }

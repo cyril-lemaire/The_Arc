@@ -1,0 +1,3 @@
+arc_homepage:
+    path:     /
+    defaults: { _controller: ArcBundle:Default:index }
